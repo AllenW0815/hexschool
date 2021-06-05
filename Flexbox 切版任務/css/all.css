@@ -1,0 +1,552 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&family=Noto+Serif+TC:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+@include xl {
+    寫在該class內層代表該class在此寬度下的樣式
+}
+*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.f_container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container .logo_box {
+  width: 210px;
+}
+
+header .container .logo_box a img {
+  width: 100%;
+}
+
+header .container nav ul.h_ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .container nav ul.h_ul li {
+  font-size: 1rem;
+  margin-right: 60px;
+  color: #3F5D45;
+}
+
+header .container nav ul.h_ul li:last-child {
+  margin-right: 0;
+}
+
+section.products .container .banner_box {
+  width: 100%;
+  height: auto;
+  margin-bottom: 60px;
+}
+
+section.products .container .banner_box img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+section.products .container .product_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.products .container .product_box .category {
+  width: 300px;
+  margin-right: 20px;
+}
+
+section.products .container .product_box .category ul.pd_ul {
+  width: 100%;
+}
+
+section.products .container .product_box .category ul.pd_ul li {
+  width: 100%;
+  padding: 16px 0;
+  color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 1px solid #EAF0ED;
+  cursor: pointer;
+}
+
+section.products .container .product_box .category ul.pd_ul li:hover {
+  background-color: #EAF0ED;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+section.products .container .product_box .category ul.pd_ul li:first-child {
+  color: #EAF0ED;
+  background-color: #3F5D45;
+}
+
+section.products .container .product_box .category ul.pd_ul li:nth-child(2) {
+  background-color: #EAF0ED;
+}
+
+section.products .container .product_box .product_list {
+  width: 620px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+section.products .container .product_box .product_list .pd_card {
+  position: relative;
+  width: 300px;
+  outline: 1px solid #EAF0ED;
+  margin-bottom: 20px;
+}
+
+section.products .container .product_box .product_list .pd_card .img_box {
+  width: 100%;
+  height: 315px;
+}
+
+section.products .container .product_box .product_list .pd_card .img_box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.products .container .product_box .product_list .pd_card .text_box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.products .container .product_box .product_list .pd_card .text_box .pd_name {
+  width: 57.67%;
+  height: 56px;
+  color: #3F5D45;
+  font-weight: 300;
+  border-right: 1px solid #EAF0ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.products .container .product_box .product_list .pd_card .text_box .pd_price {
+  width: 42.33%;
+  height: 56px;
+  color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.products .container .product_box .product_list .pd_card .text_box button {
+  display: block;
+  width: 100%;
+  height: 65px;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #3F5D45;
+  background-color: #EAF0ED;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+}
+
+section.products .container .product_box .product_list .pd_card .text_box button:hover {
+  color: #FFF;
+  background-color: #a0bbad;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+section.products .container .product_box .product_list .pd_card .picked {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  padding: 12px 10px 10px 10px;
+  letter-spacing: 5px;
+  color: #FFF;
+  background-color: #3F5D45;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+}
+
+section.products .container .product_box .product_list .pd_card .heart_icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+section.products .container .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 60px;
+}
+
+section.products .container .pagination .page_box {
+  width: 60px;
+  height: 60px;
+  color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  outline: 1px solid #EAF0ED;
+  cursor: pointer;
+}
+
+section.products .container .pagination .page_box:hover {
+  background-color: #EAF0ED;
+  -webkit-transition: .25s;
+  transition: .25s;
+}
+
+section.products .container .pagination .page_box.active {
+  color: #FFF;
+  background-color: #3F5D45;
+}
+
+section.products .container .pagination .page_box img {
+  width: 50%;
+}
+
+section.mail_box {
+  width: 100%;
+  height: 116px;
+  background-color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.mail_box .f_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.mail_box .f_container .text_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.mail_box .f_container .text_box .img_box {
+  width: 40px;
+  margin-right: 20px;
+}
+
+section.mail_box .f_container .text_box .img_box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.mail_box .f_container .text_box p {
+  color: #EAF0ED;
+  font-size: 1.5rem;
+}
+
+section.mail_box .f_container .mail_link {
+  width: 380px;
+  height: 56px;
+  background-color: #EAF0ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.mail_box .f_container .mail_link .img_box {
+  width: 64px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.mail_box .f_container .mail_link .img_box:last-child {
+  background-color: #FFE180;
+}
+
+section.mail_box .f_container .mail_link .img_box img {
+  width: 24px;
+}
+
+footer {
+  width: 100%;
+  height: 314px;
+  padding: 30px 0;
+  background-color: #EAF0ED;
+}
+
+footer .f_container {
+  height: 254px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .f_container .info_box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .f_container .info_box .img_box {
+  width: 170px;
+}
+
+footer .f_container .info_box .img_box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .f_container .info_box .text_box {
+  width: 100%;
+}
+
+footer .f_container .info_box .text_box p {
+  font-size: 1rem;
+  line-height: 24px;
+  color: #3F5D45;
+  font-weight: 300;
+}
+
+footer .f_container .info_box .text_box p:nth-child(3) {
+  margin-bottom: 30px;
+}
+
+footer .f_container .info_box .text_box .social_box {
+  width: 72px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .f_container .info_box .text_box .social_box img {
+  width: 32px;
+}
+
+footer .f_container .info_box .text_box .social_box img:first-child {
+  margin-right: 8px;
+}
+
+footer .f_container .title_box {
+  position: relative;
+  height: 100%;
+  color: #3F5D45;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .f_container .title_box .title {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 5px;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+}
+
+footer .f_container .title_box .copy_right {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 300;
+}
+
+footer .f_container .title_box .bar {
+  position: absolute;
+  top: 105px;
+  right: 15px;
+  width: 1px;
+  height: 45px;
+  background-color: #3F5D45;
+}
+/*# sourceMappingURL=all.css.map */
